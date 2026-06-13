@@ -22,5 +22,6 @@ Output:
 
 <img src="https://tinyurl.com/yreeaxu8" width="50" height="50">
 
-                                                                            # Note
+# Note
+
 Other commands not implemented
