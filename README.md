@@ -20,7 +20,7 @@ Input: /try
 
 Output:
 
-<img src="https://tinyurl.com/yreeaxu8" width="50" height="50">
+<img src="https://tinyurl.com/yreeaxu8" width="80" height="80">
 
 # Note
 
