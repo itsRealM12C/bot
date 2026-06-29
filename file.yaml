@@ -1,0 +1,11 @@
+name: Check Runner OS System Info
+
+on: [push, workflow_dispatch]
+
+jobs:
+  check-system:
+    runs-on: ubuntu-latest # Can be ubuntu-latest, windows-latest, or macos-latest
+    steps:
+      - name: Run uname command
+        run: |
+          uname -a
