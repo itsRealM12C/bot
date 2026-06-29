@@ -1,11 +1,14 @@
-name: Check Runner OS System Info
+- name: Setup Headless Display and VNC
+  run: |
+    sudo apt-get update
+    sudo apt-get install -y xfce4 xfce4-goodies tightvncserver fluxbox
+    # Start the display
+    mkdir -p ~/.vnc
+    echo "password123" | vncpasswd -f > ~/.vnc/passwd
+    chmod 600 ~/.vnc/passwd
+    vncserver :1 -geometry 1280x800 -depth 24
 
-on: [push, workflow_dispatch]
-
-jobs:
-  check-system:
-    runs-on: ubuntu-latest # Can be ubuntu-latest, windows-latest, or macos-latest
-    steps:
-      - name: Run uname command
-        run: |
-          uname -a
+- name: Expose Runner via Reverse Tunnel
+  run: |
+    # Use a tool like tmate or ngrok here to open a hole through the firewall
+    # This keeps the job alive so you can connect, look around, and debug!
